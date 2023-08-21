@@ -81,6 +81,16 @@ class RedisCluster implements ClusterInterface, \IteratorAggregate, \Countable
     }
 
     /**
+     * Sets the default parameter to be used when connecting to cluster nodes
+     *
+     * @param array $parameters Array of default parameters
+     */
+    public function setDefaultParameters($parameters)
+    {
+        $this->connections->setDefaultParameters($parameters);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function isConnected()
